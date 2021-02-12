@@ -5,6 +5,7 @@ use App\Http\Controllers\CoordinadorController;
 use App\Http\Controllers\RepresentanteController;
 use App\Http\Controllers\TutorController;
 use App\Http\Controllers\EmpresaController;
+use App\Http\Controllers\CentroDeTrabajoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,5 @@ Route::get("/coordinador", [CoordinadorController::class, "index"]);
 Route::get('/tutor', [TutorController::class, "index"]);
 
 Route::get('/empresa', [EmpresaController::class, "index"]);
+
+Route::get('/centro-de-trabajo', [CentroDeTrabajoController::class, "index"]);
