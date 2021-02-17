@@ -15,7 +15,7 @@ class TutorModel extends Model
 
     public function getCentroDeTrabajo() {
 
-        return $this->hasOne(CentroDeTrabajoModel::class);
+        return $this->hasOne(CentroDeTrabajoModel::class, "id", "centro_de_trabajo_id");
 
     }
 }
