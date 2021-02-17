@@ -4,14 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\CentroDeTrabajoModel;
 
 class TutorModel extends Model
 {
     use HasFactory;
 
-    protected $table = "tutor";
-    protected $primaryKey = 'nif';
-    public $incrementing = false;
-    protected $keyType = "string";
+    protected $table = "tutores";
     public $timestamps = false;
+
+    public function getCentroDeTrabajo() {
+
+        return $this->hasOne(CentroDeTrabajoModel::class, "id", "centro_de_trabajo_id");
+
+    }
 }

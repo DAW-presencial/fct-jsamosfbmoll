@@ -22,12 +22,13 @@ Route::get('/', function () {
     return view('index');
 })->name("index");
 
-Route::get("/representante", [RepresentanteController::class, "index"]);
+Route::get("/representante", [RepresentanteController::class, "index"])->name("representante");
 
-Route::get("/coordinador", [CoordinadorController::class, "index"]);
+Route::get("/coordinador", [CoordinadorController::class, "index"])->name("coordinador");
+Route::post("/coordinador", [CoordinadorController::class, "store"]);
 
-Route::get('/tutor', [TutorController::class, "index"]);
+Route::get('/tutor', [TutorController::class, "index"])->name("tutor");
 
-Route::get('/empresa', [EmpresaController::class, "index"]);
+Route::get('/empresa', [EmpresaController::class, "index"])->name("empresa");
 
-Route::get('/centro-de-trabajo', [CentroDeTrabajoController::class, "index"]);
+Route::get('/centro-de-trabajo', [CentroDeTrabajoController::class, "index"])->name("centro-de-trabajo");

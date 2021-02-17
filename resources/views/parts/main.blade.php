@@ -9,7 +9,16 @@
 </head>
 <body>
 
-    <nav><a href="{{ route('index') }}">Página principal</a></nav>
+    <nav>
+        <a href="{{ route('index') }}">Página principal</a>
+        <ul>
+            <li><a href="{{ route('coordinador') }}">Coordinadores</a></li>
+            <li><a href="{{ route('tutor') }}">Tutores</a></li>
+            <li><a href="{{ route('empresa') }}">Empresas</a></li>
+            <li><a href="{{ route('centro-de-trabajo') }}">Centros de trabajo</a></li>
+            <li><a href="{{ route('representante') }}">Representantes</a></li>
+        </ul>
+    </nav>
 
     @yield('main')
 </body>
