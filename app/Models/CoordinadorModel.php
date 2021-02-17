@@ -11,4 +11,9 @@ class CoordinadorModel extends Model
 
     protected $table = "coordinadores";
     public $timestamps = false;
+
+    protected $fillable = [
+        "nif",
+        "nombre"
+    ];
 }

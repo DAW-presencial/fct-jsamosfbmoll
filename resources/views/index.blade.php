@@ -1,5 +1,7 @@
 @extends('parts.main')
 
 @section('main')
-    hola
+
+    <h1>Página principal</h1>
+
 @endsection

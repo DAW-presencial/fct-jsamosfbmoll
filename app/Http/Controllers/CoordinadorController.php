@@ -3,10 +3,30 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\CoordinadorModel;
 
 class CoordinadorController extends Controller
 {
     public function index() {
-        dd("Coordinador");
+
+        $coordinadores = CoordinadorModel::all();
+
+        return view("coordinador")->with("coordinadores", $coordinadores);
+
+    }
+
+    public function store(Request $request) {
+
+        $request->validate([
+            "nif" => ["required"]
+        ]);
+
+        CoordinadorModel::create([
+            "nif" => $request->nif,
+            "nombre" => $request->name
+        ]);
+
+        return $this->index();
+
     }
 }
