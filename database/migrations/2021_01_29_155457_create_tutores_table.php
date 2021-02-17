@@ -4,18 +4,17 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTutorTable extends Migration {
+class CreateTutoresTable extends Migration {
 
-    private $databaseName = "tutor";
+    private $databaseName = "tutores";
     
     public function up() {
         Schema::create($this->databaseName, function(Blueprint $table) {
-            $table->text("nif");
+            $table->id();
+            $table->text("nif")->nullable(false)->unique();
             $table->text("nombre");
             $table->text("puesto_trabajo");
-            $table->primary("nif");
-            $table->bigInteger("id_centro_trabajo");
-            $table->foreign("id_centro_trabajo")->cascadeOnDelete()->references("id")->on("centro_de_trabajo");
+            $table->foreignId("centro_de_trabajo_id")->references("id")->on("centros_de_trabajo");
         });
     }
 

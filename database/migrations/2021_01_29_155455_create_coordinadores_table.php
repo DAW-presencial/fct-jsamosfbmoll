@@ -4,15 +4,15 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCoordinadorTable extends Migration {
+class CreateCoordinadoresTable extends Migration {
 
-    private $databaseName = "coordinador";
+    private $databaseName = "coordinadores";
     
     public function up() {
         Schema::create($this->databaseName, function(Blueprint $table) {
-            $table->text("nif");
+            $table->id();
+            $table->text("nif")->nullable(false)->unique();
             $table->text("nombre");
-            $table->primary("nif");
         });
     }
 
