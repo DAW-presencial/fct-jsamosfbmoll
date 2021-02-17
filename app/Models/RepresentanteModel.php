@@ -9,9 +9,6 @@ class RepresentanteModel extends Model
 {
     use HasFactory;
 
-    protected $table = "representante";
-    protected $primaryKey = 'nif';
-    public $incrementing = false;
-    protected $keyType = "string";
+    protected $table = "representantes";
     public $timestamps = false;
 }

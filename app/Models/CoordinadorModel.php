@@ -9,9 +9,6 @@ class CoordinadorModel extends Model
 {
     use HasFactory;
 
-    protected $table = "coordinador";
-    protected $primaryKey = 'nif';
-    public $incrementing = false;
-    protected $keyType = "string";
+    protected $table = "coordinadores";
     public $timestamps = false;
 }
