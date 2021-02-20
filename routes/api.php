@@ -14,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("coordinador", function() {
+Route::get("/coordinador", function() {
     return CoordinadorModel::all();
+});
+
+Route::get("/coordinador/{idCoordinador}", function($idCoordinador) {
+    if (! is_numeric($idCoordinador)) { 
+        return ["status" => "error"];
+    }
+    return CoordinadorModel::where("id", $idCoordinador)->get();
+});
+
+Route::get("/coordinador/nif/{nifCoordinador}", function($nifCoordinador = "") {
+    return CoordinadorModel::where("nif", strtoupper($nifCoordinador))->get();
 });
