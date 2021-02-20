@@ -28,7 +28,7 @@ class CoordinadorController extends Controller
             "nombre" => $request->name
         ]);
 
-        return $this->index();
+        return back();
 
     }
 }
