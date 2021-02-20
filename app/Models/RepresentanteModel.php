@@ -11,4 +11,9 @@ class RepresentanteModel extends Model
 
     protected $table = "representantes";
     public $timestamps = false;
+
+    protected $fillable = [
+        "nif",
+        "nombre"
+    ];
 }
