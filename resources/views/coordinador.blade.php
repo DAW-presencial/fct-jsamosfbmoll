@@ -21,16 +21,20 @@
 <br/>
 
 <table>
-    <tr>
-        <th>NIF</th>
-        <th>Nombre</th>
-    </tr>
-@foreach ($coordinadores as $coordinador)
-    <tr>
-        <td>{{ $coordinador->nif }}</td>
-        <td>{{ $coordinador->nombre }}</td>
-    </tr>
-@endforeach
+    <thead>
+        <tr>
+            <th>NIF</th>
+            <th>Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach ($coordinadores as $coordinador)
+        <tr>
+            <td>{{ $coordinador->nif }}</td>
+            <td>{{ $coordinador->nombre }}</td>
+        </tr>
+        @endforeach
+    </tbody>
 </table>
 
 @endsection
