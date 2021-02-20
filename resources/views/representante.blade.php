@@ -4,7 +4,7 @@
 
 <h1>Coordinadores</h1>
 
-<form action="{{ route('coordinador') }}" method="POST">
+<form action="{{ route('representante') }}" method="POST">
     @csrf
     <label for="nif">NIF:</label>
     <input name="nif" type="text" id="nif" required>
@@ -12,7 +12,7 @@
     <label for="name">Nombre:</label>
     <input name="name" type="text" id="name" required>
     <br/>
-    <button type="submit">Añadir coordinador</button>
+    <button type="submit">Añadir representante</button>
 </form>
 
 <br/>
@@ -28,10 +28,10 @@
         </tr>
     </thead>
     <tbody>
-        @foreach ($coordinadores as $coordinador)
+        @foreach ($representantes as $representante)
         <tr>
-            <td>{{ $coordinador->nif }}</td>
-            <td>{{ $coordinador->nombre }}</td>
+            <td>{{ $representante->nif }}</td>
+            <td>{{ $representante->nombre }}</td>
         </tr>
         @endforeach
     </tbody>

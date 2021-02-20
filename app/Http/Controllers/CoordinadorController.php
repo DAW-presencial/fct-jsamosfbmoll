@@ -11,7 +11,9 @@ class CoordinadorController extends Controller
 
         $coordinadores = CoordinadorModel::all();
 
-        return view("coordinador")->with("coordinadores", $coordinadores);
+        return view("coordinador", [
+            "coordinadores" => $coordinadores
+            ]);
 
     }
 
@@ -26,7 +28,7 @@ class CoordinadorController extends Controller
             "nombre" => $request->name
         ]);
 
-        return $this->index();
+        return back();
 
     }
 }

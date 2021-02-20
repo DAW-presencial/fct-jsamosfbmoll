@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CoordinadorController;
-use App\Http\Controllers\RepresentanteController;
 use App\Http\Controllers\TutorController;
 use App\Http\Controllers\EmpresaController;
+use App\Http\Controllers\CoordinadorController;
+use App\Http\Controllers\RepresentanteController;
 use App\Http\Controllers\CentroDeTrabajoController;
 
 /*
@@ -23,6 +23,7 @@ Route::get('/', function () {
 })->name("index");
 
 Route::get("/representante", [RepresentanteController::class, "index"])->name("representante");
+Route::post('/representante', [RepresentanteController::class, "store"]);
 
 Route::get("/coordinador", [CoordinadorController::class, "index"])->name("coordinador");
 Route::post("/coordinador", [CoordinadorController::class, "store"]);
