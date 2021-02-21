@@ -22,7 +22,7 @@ class RepresentanteController extends Controller
         ]);
 
         RepresentanteModel::create([
-            "nif" => $request->nif,
+            "nif" => strtoupper($request->nif),
             "nombre" => $request->name
         ]);
 

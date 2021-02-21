@@ -24,7 +24,7 @@ class CoordinadorController extends Controller
         ]);
 
         CoordinadorModel::create([
-            "nif" => $request->nif,
+            "nif" => strtoupper($request->nif),
             "nombre" => $request->name
         ]);
 
