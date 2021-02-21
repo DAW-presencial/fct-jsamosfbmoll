@@ -2,7 +2,7 @@
 
 @section('main')
 
-<h1>Coordinadores</h1>
+<h1>Representantes</h1>
 
 <form action="{{ route('representante') }}" method="POST">
     @csrf
